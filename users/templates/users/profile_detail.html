@@ -1,0 +1,21 @@
+{% extends 'users/base.html' %} {% load static %} {% block content %}
+<div class="container text-center">
+    <h3>Profile Detail View</h3>
+    <p>{{profile}}</p>
+
+    <div class="container">
+        {% for answer in answers %}
+        <div class="card">
+            <div class="card-header">
+                {{answer.question}}
+            </div>
+            <div class="card-body">
+                {{answer.answer_field}}
+            </div>
+        </div>
+        <br><br>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'users/base.html' %} {% load static %} {% block content %}
+<div class="container text-center">
+  <h3>Section Detail View</h3>
+  <ul style="list-style-type: none">
+    {% for profile in profiles %}
+    <li>
+      <a class="btn btn-danger" href="{% url 'profile_detail' profile.id%}"
+        >{{profile}}</a
+      >
+    </li>
+    <br /><br />
+    {%endfor%}
+  </ul>
+</div>
+{% endblock content %}
